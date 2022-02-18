@@ -3,3 +3,6 @@
 - clean Helm repos and get a new ones (for SDRAN)
 - setup sdran 1.3
 - deep clean after kube-ovn
+
+
+//TODO: add ip to calico script
