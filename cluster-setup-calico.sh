@@ -2,6 +2,8 @@
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+echo -e "${RED}disabling swap  ...${NC}"
+
 echo -e "${RED}init cluster with pod-network cidr 192.168.0.0/16 ...${NC}"
 
 yes | sudo kubeadm init --pod-network-cidr=192.168.0.0/16
