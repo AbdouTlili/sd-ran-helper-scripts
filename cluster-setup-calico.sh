@@ -3,6 +3,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 echo -e "${RED}disabling swap  ...${NC}"
+sudo swapoff -a 
 
 echo -e "${RED}init cluster with pod-network cidr 192.168.0.0/16 ...${NC}"
 
