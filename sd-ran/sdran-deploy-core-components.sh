@@ -2,6 +2,8 @@
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
+source `eval "pwd"`/sdran-clean-core-components.sh
+
 echo -e "${RED}deploying atomix-controller 0.6.9 ...${NC}"
 
 helm install atomix-controller atomix/atomix-controller -n kube-system --wait --version 0.6.9
@@ -32,15 +34,17 @@ path=${SDRAN_CHART_DIR}
 
 echo -e "${RED}deploying onos-topo ...${NC}"
 helm install -n sdran onos-topo $path/onos-helm-charts/onos-topo
+echo
 
 echo -e "${RED}deploying onos-cli ...${NC}"
 helm install -n sdran onos-cli $path/onos-helm-charts/onos-cli
-
+echo
 echo -e "${RED}deploying onos-config ...${NC}"
 helm install -n sdran onos-config $path/onos-helm-charts/onos-config
-
+echo
 echo -e "${RED}deploying onos-e2t ...${NC}"
 helm install -n sdran onos-e2t $path/sdran-helm-charts/onos-e2t
-
+echo
 echo -e "${RED}deploying onos-uenib ...${NC}"
 helm install -n sdran onos-uenib $path/sdran-helm-charts/onos-uenib
+echo
