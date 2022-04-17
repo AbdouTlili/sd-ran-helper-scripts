@@ -33,18 +33,18 @@ fi
 path=${SDRAN_CHART_DIR}
 
 echo -e "${RED}deploying onos-topo ...${NC}"
-helm install -n sdran onos-topo $path/onos-helm-charts/onos-topo
+helm install -n sdran onos-topo $path/onos-helm-charts/onos-topo --wait
 echo
 
 echo -e "${RED}deploying onos-cli ...${NC}"
-helm install -n sdran onos-cli $path/onos-helm-charts/onos-cli
+helm install -n sdran onos-cli $path/onos-helm-charts/onos-cli --wait
 echo
 echo -e "${RED}deploying onos-config ...${NC}"
-helm install -n sdran onos-config $path/onos-helm-charts/onos-config
+helm install -n sdran onos-config $path/onos-helm-charts/onos-config --wait
 echo
 echo -e "${RED}deploying onos-e2t ...${NC}"
-helm install -n sdran onos-e2t $path/sdran-helm-charts/onos-e2t
+helm install -n sdran onos-e2t $path/sdran-helm-charts/onos-e2t --wait
 echo
 echo -e "${RED}deploying onos-uenib ...${NC}"
-helm install -n sdran onos-uenib $path/sdran-helm-charts/onos-uenib
+helm install -n sdran onos-uenib $path/sdran-helm-charts/onos-uenib --wait
 echo
