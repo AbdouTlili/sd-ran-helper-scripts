@@ -18,7 +18,7 @@ helm install onos-operator onos/onos-operator -n kube-system --wait --version 0.
 
 
 
-echo -e "${RED}Creating sdran namsspace ...${NC}"
+echo -e "${RED}Creating sdran namespace ...${NC}"
 
 kubectl create ns sdran 
 
