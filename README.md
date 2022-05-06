@@ -15,3 +15,4 @@ contains both :
 
 //TODO: add ip to calico script
 
+gpg key
